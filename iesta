@@ -1,0 +1,13 @@
+enum EditMode: String {
+    case preview, edit
+    
+    mutating func next() {
+        switch self {
+        case .preview:
+            self = .edit
+        case .edit:
+            self = .preview
+        }
+    }
+}
+
